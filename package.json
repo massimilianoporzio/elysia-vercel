@@ -4,8 +4,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
-    "start": "bun run src/index.ts",
-    "build": "bun tsc"
+    "start": "bun src/index.ts",
+    "build": "bun build src/index.ts",
+     "vercel-build": "echo 'Build completed"
   },
   "dependencies": {
     "elysia": "latest"
@@ -13,7 +14,10 @@
   "devDependencies": {
     "bun-types": "latest"
   },
-  "module": "src/index.ts",
+  "module": "src/index.js",
   "type": "module",
+  "engines": {
+    "bun": ">=1.0.0"
+  },
   "trustedDependencies": ["elysia"]
 }

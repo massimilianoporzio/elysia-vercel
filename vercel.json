@@ -1,21 +1,13 @@
 {
-  "installCommand": "bun install", 
-  "buildCommand": "bun run build",
   "functions": {
     "src/index.ts": {
-      "runtime": "nodejs@20.x"
+      "runtime": "@vercel/bun"
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/src/index.ts"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [{ "key": "X-Powered-By", "value": "Elysia on Vercel" }]
+      "src": "/(.*)",
+      "dest": "/src/index.ts"
     }
   ]
 }
