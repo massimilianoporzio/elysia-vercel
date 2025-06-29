@@ -1,4 +1,11 @@
 {
+  "installCommand": "bun install", 
+  "buildCommand": "bun run build",
+  "functions": {
+    "src/index.ts": {
+      "runtime": "nodejs@20.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/(.*)",
