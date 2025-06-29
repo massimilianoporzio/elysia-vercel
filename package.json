@@ -6,7 +6,7 @@
     "dev": "bun run --watch src/index.ts",
     "start": "bun src/index.ts",
     "build": "bun build src/index.ts",
-     "vercel-build": "echo 'Build completed"
+     "vercel-build": "echo 'Build completed'"
   },
   "dependencies": {
     "elysia": "latest"
