@@ -1,13 +1,11 @@
 {
   "functions": {
-    "src/index.ts": {
-      "runtime": "@vercel/bun"
-    }
+    "api/index.js": {}
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/src/index.ts"
+      "dest": "/api/index.js"
     }
   ]
 }

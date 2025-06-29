@@ -15,7 +15,16 @@ const app = new Elysia()
   .listen(3000);
 
 // Esporta l'app per Vercel
-export default app;
+// Handler per Vercel
+export default async function handler(req: Request) {
+  return await app.fetch(req);
+}
+
+// Per sviluppo locale
+if (import.meta.main) {
+  app.listen(3000);
+  console.log("🦊 Elysia is running at http://localhost:3000");
+}
 
 console.log(
   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
